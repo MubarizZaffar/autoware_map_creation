@@ -10,7 +10,7 @@ The linked SLAM method has its stand-alone documentation and I found it sufficie
    (sensor_msgs/PointCloud2)` and `/tf_static`. So you will have to
    [remap](https://answers.ros.org/question/345960/rosbag2-remap-topic/) your pointcloud topic when replaying the rosbag.
    
- - When playing a rosbag to create the map, only publish the `/input_cloud` and the `/tf_static` topic. If you mistakenly publish the /tf topic, then there will be two nodes (rosbag play and lidar_slam method) disagreeing on /tf. You can re-record the rosbag with only these two topics, and then play this re-recorded rosbag. See 3.1 [here](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html).
+ - When playing a rosbag to create the map, only publish the `/input_cloud` and the `/tf_static` topic. If you mistakenly publish the `/tf` topic, then there will be two nodes (rosbag play and lidar_slam method) disagreeing on `/tf`. You can re-record the rosbag with only these two topics, and then play this re-recorded rosbag. See 3.1 [here](https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Recording-And-Playing-Back-Data/Recording-And-Playing-Back-Data.html).
 
 **INPUTS NEEDED:**
 The following inputs are needed.
